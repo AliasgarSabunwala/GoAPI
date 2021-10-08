@@ -1,2 +1,6 @@
-// this is api to create user, userid, password, posts and all posts
+/*
+    Here, I'm building a fully-fledged REST API that exposes GET, POST, DELETE and 
+    PUT endpoints that will subsequently allow you to perform the full range of CRUD operations 
+    to create user, userid, password, posts and see all posts.
+*/ 
 
