@@ -92,8 +92,10 @@ func main() {
     }
 
     
-    // In the Above Code, If the response is in JSON format, we can use any 3rd-party JSON parsers to parse the response.
-    
+    /*
+        In the Above Code, If the response is in JSON format, 
+        we can use any 3rd-party JSON parsers to parse the response.
+    */
 
 
     // Creating an User 
