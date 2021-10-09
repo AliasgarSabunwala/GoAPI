@@ -1,4 +1,4 @@
-# insta-API-in-Go
+# Backend API in Golang (Go)
 
 Here, I'm building a fully-fledged REST API that exposes GET, POST and 
     PUT endpoints that will subsequently allow you to perform the create user, userid, password, posts and see all posts.
