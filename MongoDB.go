@@ -42,6 +42,10 @@ To insert a document into a collection,
 first retrieve a Database and then Collection instance from the Client:
 */
 collection := client.Database("AG").Collection("users")
+collection := client.Database("AG").Collection("userid")
+collection := client.Database("AG").Collection("posts")
+collection := client.Database("AG").Collection("postsid")
+collection := client.Database("AG").Collection("allposts")
 
 func main() {
 }
