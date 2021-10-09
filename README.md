@@ -1,4 +1,4 @@
-# Backend API in Golang (Go)
+# Backend API in Golang(Go)
 
 Building a HTTP JSON API capable of the following operations,
 

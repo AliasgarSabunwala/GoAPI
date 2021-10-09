@@ -4,3 +4,8 @@
 		Use JSON request body
 		URL should be ‘/posts'
 */
+
+Id
+Caption
+Image URL
+Posted Timestamp
