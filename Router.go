@@ -3,21 +3,18 @@
 */
 
 package main
- 
+
 import (
-    "fmt"
-    "html"
-    "log"
-    "net/http"
-	"net/url"
- 
-    // "github.com/gorilla/mux"
+	"fmt"
+	"html"
+	"log"
+	"net/http"
 )
  
 func main() {
  
-    // router := mux.NewRouter().StrictSlash(true)
-	router := NewRouter().StrictSlash(true)
+    var router = http.NewServeMux().StrictSlash(true)
+	router = http.NewServeMux().StrictSlash(true)
     router.HandleFunc("/", Index)
     log.Fatal(http.ListenAndServe(":8080", router))
 }
