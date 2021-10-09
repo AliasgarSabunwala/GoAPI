@@ -1,3 +1,13 @@
+
+
+func main() {
+    post = []post{
+        post{Title: "Hello", Desc: "Article Description", Content: "Article Content"},
+        post{Title: "Hello 2", Desc: "Article Description", Content: "Article Content"},
+    }
+    handleRequests()
+}
+
 type post struct {
     Title string `json:"Title"`
     Desc string `json:"desc"`
