@@ -1,5 +1,4 @@
-# insta-API-in-Go
-Insta API in Go
+# Instagram Backend API in Golang (Go)
 
 Here, I'm building a fully-fledged REST API that exposes GET, POST, DELETE and 
     PUT endpoints that will subsequently allow you to perform the full range of CRUD operations 
