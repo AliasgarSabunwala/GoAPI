@@ -1,6 +1,5 @@
 /*
 	Get a post using id
-	URL should be ‘/posts/<id here>’
 */
 
 package main
@@ -103,7 +102,7 @@ func main() {
             "Postid":[{
 						"attributes": {
 							"PostId": {
-								url:  ("mongodb+srv://alif:vZJVWHXNtq5X-#c@ag.znuaz.mongodb.net/AG?
+								url:  ("mongodb+srv://alif:vZJVWHXNtq5X-#c@ag.znuaz.mongodb.net/AG/posts/1?
 			retryWrites=true&w=majority");
 							},
 								"relationships": {

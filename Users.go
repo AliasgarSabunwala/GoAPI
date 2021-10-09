@@ -1,6 +1,5 @@
 /*
 	User Creation 
-    URL should be ‘/users'
 */
 
 package main
@@ -101,6 +100,8 @@ func main() {
     // Creating an User 
             "user"{
                     "attributes": {
+                        url:  ("mongodb+srv://alif:vZJVWHXNtq5X-#c@ag.znuaz.mongodb.net/AG/users?
+    retryWrites=true&w=majority");
                                     "Id": "Id" 
                                     "Name": "Name" 
                                     "Email": "Email"

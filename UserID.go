@@ -1,6 +1,5 @@
 /*
 	Get a user using id
-    URL should be ‘/users/<id here>’
 */
 
 package main
@@ -103,7 +102,7 @@ func main() {
             "userid":[{
                 "attributes": {
                     "Id": {
-                        url:  ("mongodb+srv://alif:vZJVWHXNtq5X-#c@ag.znuaz.mongodb.net/AG?
+                        url:  ("mongodb+srv://alif:vZJVWHXNtq5X-#c@ag.znuaz.mongodb.net/AG/users/1?
     retryWrites=true&w=majority");
                     },
                     "relationships": {
