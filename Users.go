@@ -14,7 +14,8 @@ import (
 func main() {
 
     // creating an URL object with a target URL string that accepts the JSON data via HTTP POST method:
-    URL url = new URL ("mongodb+srv://alif:<vZJVWHXNtq5X-#c>@ag.znuaz.mongodb.net/AG?retryWrites=true&w=majority");
+    URL url = new URL ("mongodb+srv://alif:vZJVWHXNtq5X-#c@ag.znuaz.mongodb.net/AG?
+    retryWrites=true&w=majority");
 
 
     /*
@@ -39,17 +40,15 @@ func main() {
         This parameter has to be set to send the request body in JSON format.
 
         Failing to do so, the server returns HTTP status code “400-bad request”:
-
     */
     con.setRequestProperty("Content-Type", "application/json; utf-8");
     // Also, note that we've mentioned charset encoding along with content type. This is useful 
     // if the request content encoding is different from UTF-8 encoding, which is the default encoding.
 
+
     /*
         Setting up Response Format Type
         Set the “Accept” request header to “application/json” to read the response in the desired format:
-
-
     */
         con.setRequestProperty("Accept", "application/json");
 
@@ -81,7 +80,6 @@ func main() {
     Remember to use try-with-resources to close the response stream automatically.
     Read through the whole response content, and print the final response string:
     */
-
     freestar
     try(BufferedReader br = new BufferedReader(
     new InputStreamReader(con.getInputStream(), "utf-8"))) {
@@ -93,16 +91,15 @@ func main() {
         System.out.println(response.toString());
     }
 
-    /*
-    In the Above Code, If the response is in JSON format, 
-    we can use any 3rd-party JSON parsers to parse the response.
-    */
+    
+    // In the Above Code, If the response is in JSON format, we can use any 3rd-party JSON parsers to parse the response.
+    
 
 
     // Creating an User 
             "user"{
                 "attributes": {
-                    "Id": 
+                    "Id": userid
                     "Name": 
                     "Email":
                     "Password":  
