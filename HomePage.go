@@ -1,32 +1,26 @@
 /*
-<- Getting Started with A Basic API
-To get started we will have to create a very simple server which 
-can handle HTTP requests. To do this we’ll create a new file 
-called HomePage.go. Within this HomePage.go file we’ll want to 
-define 3 distinct functions. A homePage function that will handle 
-all requests to our root URL, a handleRequests function that will 
-match the URL path hit with a defined function and a main function 
-which will kick off our API.
+A Basic Web Server
+A RESTful service starts with fundamentally being a web service first. Here is a
+really basic web server that responds to any requests by simply outputting the request
+url:
+Running this example will spin up a server on port 8080,
+and can be accessed at http://localhost:8080
 */
 
 package main
 
 import (
-    "fmt"
-    "log"
-    "net/http"
+	"fmt"
+	"html"
+	"log"
+	"net/http"
 )
 
-func homePage(w http.ResponseWriter, r *http.Request){
-    fmt.Fprintf(w, "Welcome!")
-    fmt.Println("Endpoint Hit: homePage")
-}
-
-func handleRequests() {
-    http.HandleFunc("/", homePage)
-    log.Fatal(http.ListenAndServe(":10000", nil))
-}
-
 func main() {
-    handleRequests()
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
+	})
+
+	log.Fatal(http.ListenAndServe(":8080", nil))
+
 }
