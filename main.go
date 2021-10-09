@@ -1,9 +1,11 @@
 package main
 
 import (
+	"fmt"
 	"flag"
 	"log"
 	"net"
+	"net/http"
 )
 
 func main() {
@@ -16,4 +18,13 @@ func main() {
 	if err := runHttp(addr); err != nil {
 		log.Fatal(err)
 	}
+}
+
+func runHttp(listenAddr string) error {
+	s := http.Server{
+		Addr:    listenAddr,
+		Handler: http.DefaultServeMux,
+	}
+	fmt.Printf("Starting HTTP listener at %s\n", listenAddr)
+	return s.ListenAndServe()
 }
