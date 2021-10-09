@@ -10,5 +10,4 @@ Building a HTTP JSON API capable of the following operations,
 & here Passwords are securely stored such they can't be reverse engineered
 & the server is thread safe
 & has pagination to the list endpoint
-& has unit tests
 also it makes subsequent calls to a MongoDB database.    
