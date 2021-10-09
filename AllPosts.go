@@ -3,6 +3,7 @@
 		Should be a GET request
 		URL should be ‘/posts/users/<Id here>'
 */
+package main
 
 // GET Request with fields[post] and fields[user] parameters:
 GET /post?include=author&fields[post]=caption,image,userid&fields[user]=name HTTP/2
@@ -12,9 +13,10 @@ GET /post?include=author&fields[post]=caption,image,userid&fields[user]=name HTT
 HTTP/2 200 OK
 Content-Type: application/vnd.api+json
 
+func main() {
 {
   "data": [{
-    "type": "post's",
+    "type": "post",
     "id": "1",
     "attributes": {
       "caption": "JSON:API paints my bikeshed!",

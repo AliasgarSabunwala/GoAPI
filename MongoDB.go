@@ -1,3 +1,5 @@
+package main
+
 /*
     To get started with the driver, we import the mongo package, and create a mongo.Client:
      here only 1 function is imported because of using MongoDB Atlas ie it's online version 
@@ -35,3 +37,6 @@ if err != nil {
 To insert a document into a collection, first retrieve a Database and then Collection instance from the Client:
 */
 collection := client.Database("AG").Collection("users")
+
+func main() {
+}

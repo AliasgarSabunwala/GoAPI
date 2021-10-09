@@ -3,12 +3,15 @@
     URL should be ‘/users'
 */
 
+package main
+
 import (
     "fmt" 
     "http/url"
+    "database/sql"
 )    
 
-fmt main() {
+func main() {
 
     // creating an URL object with a target URL string that accepts the JSON data via HTTP POST method:
     URL url = new URL ("mongodb+srv://alif:<vZJVWHXNtq5X-#c>@ag.znuaz.mongodb.net/AG?retryWrites=true&w=majority");
@@ -61,9 +64,9 @@ fmt main() {
 
     /*
         Create the Request Body
-    After creating a custom JSON String:
+        After creating a custom JSON String:
     */
-    String jsonInputString = "{"name": "Upendra", "job": "Programmer"}";
+        String jsonInputString = "{"name": "Upendra", "job": "Programmer"}";
     
     //We would need to write it:
         try(OutputStream os = con.getOutputStream()) {
@@ -72,26 +75,28 @@ fmt main() {
         }
 
 
-/*        
-Read the Response From Input Stream
-Get the input stream to read the response content. Remember to use try-with-resources to close the response stream automatically.
+    /*        
+    Read the Response From Input Stream
+    Get the input stream to read the response content. 
+    Remember to use try-with-resources to close the response stream automatically.
+    Read through the whole response content, and print the final response string:
+    */
 
-Read through the whole response content, and print the final response string:
-*/
-
-freestar
-try(BufferedReader br = new BufferedReader(
-  new InputStreamReader(con.getInputStream(), "utf-8"))) {
-    StringBuilder response = new StringBuilder();
-    String responseLine = null;
-    while ((responseLine = br.readLine()) != null) {
-        response.append(responseLine.trim());
+    freestar
+    try(BufferedReader br = new BufferedReader(
+    new InputStreamReader(con.getInputStream(), "utf-8"))) {
+        StringBuilder response = new StringBuilder();
+        String responseLine = null;
+        while ((responseLine = br.readLine()) != null) {
+            response.append(responseLine.trim());
+        }
+        System.out.println(response.toString());
     }
-    System.out.println(response.toString());
-}
 
-// In the Above Code, If the response is in JSON format, we can use any 3rd-party JSON parsers to parse the response.
-
+    /*
+    In the Above Code, If the response is in JSON format, 
+    we can use any 3rd-party JSON parsers to parse the response.
+    */
 
 
     // Creating an User 
