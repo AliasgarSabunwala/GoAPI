@@ -2,9 +2,7 @@
 A Basic Web Server
 A RESTful service starts with fundamentally being a web service first. Here is a
 really basic web server that responds to any requests by simply outputting the request
-url:
-Running this example will spin up a server on port 8080,
-and can be accessed at http://localhost:8080
+url:http://localhost:8080
 */
 
 package main
