@@ -1,30 +1,23 @@
+/*
+A Basic Web Server
+A RESTful service starts with fundamentally being a web service first. Here is a
+really basic web server that responds to any requests by simply outputting the request
+url:http://localhost:8080
+*/
+
 package main
 
 import (
 	"fmt"
-	"flag"
+	"html"
 	"log"
-	"net"
 	"net/http"
 )
 
 func main() {
-	var (
-		host = flag.String("host", "", "host http address to listen on")
-		port = flag.String("port", "8000", "port number for http listener")
-	)
-	flag.Parse()
-	addr := net.JoinHostPort(*host, *port)
-	if err := runHttp(addr); err != nil {
-		log.Fatal(err)
-	}
-}
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
+	})
 
-func runHttp(listenAddr string) error {
-	s := http.Server{
-		Addr:    listenAddr,
-		Handler: http.DefaultServeMux,
-	}
-	fmt.Printf("Starting HTTP listener at %s\n", listenAddr)
-	return s.ListenAndServe()
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
