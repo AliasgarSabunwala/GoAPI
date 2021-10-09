@@ -1,6 +1,4 @@
-/*
-	Adding a Router using the standard library
-*/
+// Adding a Router using the standard library
 
 package main
 
