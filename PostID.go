@@ -1,8 +1,6 @@
 /*
 	Get a post using id
-		Should be a GET request
-		Id should be in the url parameter
-		URL should be ‘/posts/<id here>’
+	URL should be ‘/posts/<id here>’
 */
 
 package main
@@ -101,4 +99,27 @@ func main() {
     
 
 
+	 // Creating an PostID 
+            "Postid":[{
+						"attributes": {
+							"PostId": {
+								url:  ("mongodb+srv://alif:vZJVWHXNtq5X-#c@ag.znuaz.mongodb.net/AG?
+			retryWrites=true&w=majority");
+							},
+								"relationships": {
+											"Post": {
+															"Postid": {"caption": "caption", "image": "image"}
+													}]
+								"included": [
+												{
+													"type": "Postid",
+													"id": "1",
+													"attributes": {
+																	"caption": "caption", 
+																	"image": "image" 
+																}
+												}
+											]                       
+						},
+            } 
 }

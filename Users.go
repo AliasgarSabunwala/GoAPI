@@ -98,13 +98,12 @@ func main() {
 
     // Creating an User 
             "user"{
-                "attributes": {
-                    "Id": userid
-                    "Name": 
-                    "Email":
-                    "Password":  
-                },
+                    "attributes": {
+                                    "Id": "Id" 
+                                    "Name": "Name" 
+                                    "Email": "Email"
+                                    "Password": "Password"
+                                },
                 
-
-            } 
+                 } 
 }

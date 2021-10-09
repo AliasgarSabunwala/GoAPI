@@ -1,7 +1,5 @@
 /*
 	Create a Post
-		Should be a POST request
-		Use JSON request body
 		URL should be ‘/posts'
 */
 
@@ -38,7 +36,7 @@ func main() {
         Set the Request Method
         To send a GET request, we'll have to set the request method property to GET:
     */
-        con.setRequestMethod("GET");
+        con.setRequestMethod("POST");
 
         
     /*
@@ -103,5 +101,14 @@ func main() {
       In the Above Code, If the response is in JSON format, 
       we can use any 3rd-party JSON parsers to parse the response.
     */
-    
+
+	
+
+	 // Creating a Post 
+            "Post "{
+                "attributes": {
+                    "caption": "JSON:API!",
+      				"image": "https://www.google.com/search?q=welcome&rlz=1C1FHFK_enIN966IN966&sxsrf=AOaemvLHeSoIV8pKnfbO5kePJlhe7GA_HQ:1633796258488&tbm=isch&source=iu&ictx=1&fir=x2tw04iHmein1M%252CsSYd5x4bkIAjWM%252C_%253Bc4qkAXIC3Bh4kM%252C0qGCk2f6ihu80M%252C_%253BqrfDxlkCa7VaxM%252C4pNK5z8-7ld4HM%252C_%253BCmcMrNJJX6OKIM%252ClaVEV2CnnE4sGM%252C_%253BlIq6whI-Spp37M%252C9vti9rG8MwYXtM%252C_%253BpDnWszSTxtuBwM%252CIkep7NGQyvaRzM%252C_%253BrQ730mfy8QvNJM%252CxtGH6tKXgXET3M%252C_%253BRnBGunY_-A2P-M%252CxfeDuXhKUFJvVM%252C_%253BnigP9KVBocKUXM%252CRBDFHuF7VYc08M%252C_%253BMKVB06E6nP5NsM%252CWSH2swCJ7qtAsM%252C_&vet=1&usg=AI4_-kTbzCUbdGWyol2mHnj0HLfjxUr37A&sa=X&sqi=2&ved=2ahUKEwjO9Pys3b3zAhVbqZUCHbQ9D9IQ9QF6BAgKEAE#imgrc=x2tw04iHmein1M"
+    },
+            } 
 }

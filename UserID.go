@@ -1,7 +1,5 @@
 /*
 	Get a user using id
-    Should be a GET request
-    Id should be in the url parameter
     URL should be ‘/users/<id here>’
 */
 
@@ -101,4 +99,28 @@ func main() {
     
 
 
+     // Creating an UserID 
+            "userid":[{
+                "attributes": {
+                    "Id": {
+                        url:  ("mongodb+srv://alif:vZJVWHXNtq5X-#c@ag.znuaz.mongodb.net/AG?
+    retryWrites=true&w=majority");
+                    },
+                    "relationships": {
+                                "user": {
+                                                "userid": {"name": "name", "email": "email"}
+                                          }]
+                    "included": [
+                                    {
+                                    "type": "user",
+                                    "id": "1",
+                                    "attributes": {
+                                        "name": "John"
+                                        "Email": "Email"
+                                        "Password":  "Password" 
+                                    }
+                                    }
+                                ]                       
+                },
+            } 
 }
