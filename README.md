@@ -10,6 +10,6 @@
 
 # Features -
 - Passwords are "Securely stored" such they can't be reverse engineered
-- Here, The Server is Thread Safe
-- It has Pagination to list Endpoint 
+- Thread Safe Server
+- Has Pagination to list Endpoint 
 - Used standard Library to avoid attacks like Weak Randomness
